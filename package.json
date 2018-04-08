@@ -1,0 +1,36 @@
+{
+  "name": "find3-unifi",
+  "version": "1.0.0",
+  "description": "Indoor Wi-Fi positioning using UniFi and Find3",
+  "license": "MIT",
+  "author": "Nuno Sousa",
+  "main": "src/index.js",
+  "repository": "github.com/nunofgs/find3-unifi",
+  "scripts": {
+    "lint": "eslint src"
+  },
+  "pre-commit": {
+    "run": [
+      "lint-staged"
+    ]
+  },
+  "dependencies": {
+    "@uphold/process-manager": "^2.0.0",
+    "axios": "^0.18.0",
+    "debugnyan": "^2.0.1",
+    "eslint": "^4.19.1",
+    "eslint-config-uphold": "^0.1.1",
+    "lodash.kebabcase": "^4.1.1",
+    "node-unifi": "^1.2.2"
+  },
+  "devDependencies": {
+    "lint-staged": "^7.0.4",
+    "pre-commit": "^1.2.2"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
