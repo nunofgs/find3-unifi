@@ -3,3 +3,4 @@ extends: uphold
 rules:
   id-length: 0
   no-process-env: 0
+  prettier/prettier: 0
