@@ -7,29 +7,29 @@
   "main": "src/index.js",
   "repository": "github.com/nunofgs/find3-unifi",
   "scripts": {
-    "lint": "eslint src"
-  },
-  "pre-commit": {
-    "run": [
-      "lint-staged"
-    ]
+    "lint": "eslint ."
   },
   "dependencies": {
     "@uphold/process-manager": "^2.0.0",
     "axios": "^0.18.0",
     "debugnyan": "^2.0.1",
-    "eslint": "^4.19.1",
-    "eslint-config-uphold": "^0.1.1",
     "lodash.kebabcase": "^4.1.1",
     "node-unifi": "^1.2.2"
   },
   "devDependencies": {
-    "lint-staged": "^7.0.4",
-    "pre-commit": "^1.2.2"
+    "eslint": "^4.19.1",
+    "eslint-config-uphold": "^0.1.1",
+    "husky": "^3.0.4",
+    "lint-staged": "^7.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "*.js": [
-      "eslint --fix",
+      "npm run lint --fix",
       "git add"
     ]
   }
