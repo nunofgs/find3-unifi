@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@uphold/process-manager": "^2.0.1",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "debugnyan": "^2.0.2",
     "lodash.kebabcase": "^4.1.1",
     "node-unifi": "^1.2.2"
