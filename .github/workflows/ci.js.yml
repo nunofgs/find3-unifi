@@ -7,11 +7,10 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  container-scan:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
     - name: Container image scan
       uses: Azure/container-scan@v0
       with:
